@@ -1,0 +1,31 @@
+{
+  "name": "simple-segment-aggregation.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/jmeas/simple-segment-aggregation.js",
+  "authors": [
+    "Jmeas <jellyes2@gmail.com>"
+  ],
+  "description": "Aggregate consecutive segments by their events.",
+  "main": "dist/simple-segment-aggregation.js",
+  "keywords": [
+    "segments",
+    "time",
+    "calendar",
+    "event",
+    "data",
+    "visualization",
+    "grouping"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "underscore": "1.4.4 - 1.7.0",
+    "moment": "~2.9.0"
+  }
+}

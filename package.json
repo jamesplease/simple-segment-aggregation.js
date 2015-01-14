@@ -1,0 +1,38 @@
+{
+  "name": "simple-segment-aggregation.js",
+  "version": "0.0.1",
+  "description": "Aggregate consecutive segments by their events.",
+  "main": "dist/simple-segment-aggregation",
+  "scripts": {
+    "test": "grunt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jmeas/simple-segment-aggregation.js.git"
+  },
+  "author": "Jmeas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jmeas/simple-segment-aggregation.js/issues"
+  },
+  "homepage": "https://github.com/jmeas/simple-segment-aggregation.js",
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-concat": "^0.5.0",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-uglify": "^0.7.0",
+    "grunt-mocha-test": "^0.12.6",
+    "grunt-preprocess": "^4.1.0",
+    "grunt-template": "^0.2.3",
+    "jsdom": "^2.0.0",
+    "load-grunt-tasks": "^2.0.0",
+    "mocha": "^2.1.0",
+    "sinon": "^1.12.2",
+    "sinon-chai": "^2.6.0"
+  },
+  "dependencies": {
+    "moment": "^2.9.0",
+    "underscore": "1.4.4 - 1.7.0"
+  }
+}
