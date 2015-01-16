@@ -10,6 +10,10 @@ and [simple-segment-aggregation.js](https://github.com/jmeas/simple-segment-aggr
 Some visualizations aggregate consecutive segments into a single unit. This
 library groups any segment with the same content into the same block.
 
+### Caveats
+
+This library requires that each of your `events` have a unique identifier.
+
 ### Concepts
 
 ##### Aggregates
@@ -17,9 +21,8 @@ library groups any segment with the same content into the same block.
 An aggregate is an Object with the following properties
 
 - `events` - the events contained within the aggregation
-- `duration` - the length of the aggregation
 - `start` - a Unix timestamp representing the start of the aggregation
-- `end` - a Unix timestamp representing the end of the aggregation
+- `duration` - the length of the aggregation
 - `continuesForward` - a Boolean representing whether any of the events in this
   aggregate are in the subsequent aggregate
 - `continuesBackward` - a Boolean representing whether any of the events in this
@@ -29,12 +32,12 @@ An aggregate is an Object with the following properties
 
 This library exposes a single method.
 
-##### `aggregate( group, scale )`
+##### `aggregate( group [, options] )`
 
 It accepts a group of segments and returns a group of aggregates. The number of
 aggregates you get could be the same number of segments that you pass in, or less, but
 never more.
 
-`scale` can be any of the resolutions supported by [moment.js](http://momentjs.com/).
-A short list of examples include `days`, `years`, `weeks`. Moment's abbrevations
-are also supported, as in `w` for `weeks.` The default scale is `weeks`.
+Options can be used to customize the behavior of the API. The available options are:
+
+- `idAttribute` - The key containing the Event's unique identifier

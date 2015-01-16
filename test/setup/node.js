@@ -19,7 +19,10 @@ chai.use(sinonChai);
 global.expect = chai.expect;
 global.sinon = sinon;
 
-global.fixtures = require('../fixtures/segments');
+global.fixtures = {};
+global.fixtures.oneSegment = require('../fixtures/one-segment');
+global.fixtures.noAggregation = require('../fixtures/no-aggregation');
+global.fixtures.aggregation = require('../fixtures/aggregation');
 
 // Load the library
 global.SimpleSegmentAggregation = require('../../tmp/simple-segment-aggregation');

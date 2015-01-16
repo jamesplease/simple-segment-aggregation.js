@@ -16,11 +16,11 @@
   "plusplus"      : false,
   "quotmark"      : "single",
   "undef"         : true,
-  "unused"        : "var",
+  "unused"        : "vars",
   "strict"        : false,
   "trailing"      : true,
   "maxparams"     : 4,
-  "maxdepth"      : 2,
+  "maxdepth"      : 3,
 
   "asi"           : false,
   "boss"          : false,
