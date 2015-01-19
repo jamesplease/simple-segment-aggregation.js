@@ -26,7 +26,7 @@ describe('No aggregation', function() {
     });
 
     it('first aggregation: contains the events from the first segment', function() {
-      expect(this.result[0].events).to.deep.equal(this.data[0].segment);
+      expect(this.result[0].events).to.deep.equal(this.data[0].events);
     });
 
     it('second aggregation: starts at 2', function() {
@@ -46,7 +46,7 @@ describe('No aggregation', function() {
     });
 
     it('second aggregation: contains the events from the first segment', function() {
-      expect(this.result[1].events).to.deep.equal(this.data[1].segment);
+      expect(this.result[1].events).to.deep.equal(this.data[1].events);
     });
   });
 
@@ -77,7 +77,7 @@ describe('No aggregation', function() {
     });
 
     it('first aggregation: contains the events from the first segment', function() {
-      expect(this.result[0].events).to.deep.equal(this.data[0].segment);
+      expect(this.result[0].events).to.deep.equal(this.data[0].events);
     });
 
     it('second aggregation: starts at 2', function() {
@@ -97,7 +97,7 @@ describe('No aggregation', function() {
     });
 
     it('second aggregation: contains the events from the first segment', function() {
-      expect(this.result[1].events).to.deep.equal(this.data[1].segment);
+      expect(this.result[1].events).to.deep.equal(this.data[1].events);
     });
   });
 });

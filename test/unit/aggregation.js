@@ -18,8 +18,8 @@ describe('Aggregation', function() {
     });
 
     it('should have the same events as in both segments', function() {
-      expect(this.aggregates[0].events).to.deep.equal(this.fixtures[0].segment);
-      expect(this.aggregates[0].events).to.deep.equal(this.fixtures[1].segment);
+      expect(this.aggregates[0].events).to.deep.equal(this.fixtures[0].events);
+      expect(this.aggregates[0].events).to.deep.equal(this.fixtures[1].events);
     });
 
     it('should not extend forward', function() {
@@ -44,7 +44,7 @@ describe('Aggregation', function() {
     it('first aggregation: should have the right properties', function() {
       expect(this.aggregates[0].duration).to.equal(2);
       expect(this.aggregates[0].start).to.equal(1);
-      expect(this.aggregates[0].events).to.deep.equal(this.fixtures[0].segment);
+      expect(this.aggregates[0].events).to.deep.equal(this.fixtures[0].events);
       expect(this.aggregates[0].continuesBackward).to.be.false;
       expect(this.aggregates[0].continuesForward).to.be.true;
     });
@@ -52,7 +52,7 @@ describe('Aggregation', function() {
     it('second aggregation: should have the right properties', function() {
       expect(this.aggregates[1].duration).to.equal(1);
       expect(this.aggregates[1].start).to.equal(3);
-      expect(this.aggregates[1].events).to.deep.equal(this.fixtures[2].segment);
+      expect(this.aggregates[1].events).to.deep.equal(this.fixtures[2].events);
       expect(this.aggregates[1].continuesBackward).to.be.true;
       expect(this.aggregates[1].continuesForward).to.be.false;
     });
@@ -60,7 +60,7 @@ describe('Aggregation', function() {
     it('third aggregation: should have the right properties', function() {
       expect(this.aggregates[2].duration).to.equal(1);
       expect(this.aggregates[2].start).to.equal(4);
-      expect(this.aggregates[2].events).to.deep.equal(this.fixtures[3].segment);
+      expect(this.aggregates[2].events).to.deep.equal(this.fixtures[3].events);
       expect(this.aggregates[2].continuesBackward).to.be.false;
       expect(this.aggregates[2].continuesForward).to.be.true;
     });
@@ -68,7 +68,7 @@ describe('Aggregation', function() {
     it('fourth aggregation: should have the right properties', function() {
       expect(this.aggregates[3].duration).to.equal(1);
       expect(this.aggregates[3].start).to.equal(5);
-      expect(this.aggregates[3].events).to.deep.equal(this.fixtures[4].segment);
+      expect(this.aggregates[3].events).to.deep.equal(this.fixtures[4].events);
       expect(this.aggregates[3].continuesBackward).to.be.true;
       expect(this.aggregates[3].continuesForward).to.be.false;
     });
