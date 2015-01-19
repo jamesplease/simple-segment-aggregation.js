@@ -1,6 +1,6 @@
 {
   "name": "simple-segment-aggregation.js",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Aggregate consecutive segments by their events.",
   "main": "dist/simple-segment-aggregation",
   "scripts": {
