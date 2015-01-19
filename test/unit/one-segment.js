@@ -24,6 +24,6 @@ describe('when the group has a single segment', function() {
   });
 
   it('should return an aggregate with the same events as the segment', function() {
-    expect(this.result[0].events).to.deep.equal(fixtures.oneSegment[0].segment);
+    expect(this.result[0].events).to.deep.equal(fixtures.oneSegment[0].events);
   });
 });

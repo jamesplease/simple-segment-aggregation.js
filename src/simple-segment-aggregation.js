@@ -23,7 +23,7 @@ var SimpleSegmentAggregation = {
       continuesBackward;
 
     _.each(group, function(g, index) {
-      currentIds = _.pluck(g.segment, options.idAttribute);
+      currentIds = _.pluck(g.events, options.idAttribute);
       continuesBackward = false;
 
       if (index) {
@@ -53,7 +53,7 @@ var SimpleSegmentAggregation = {
       // iterations disprove, and modify, the assumption
       if (!aggregates[i]) {
         aggregates[i] = {
-          events: _.clone(g.segment),
+          events: _.clone(g.events),
           start: +g.timestamp,
           duration: 1,
           continuesForward: false,
