@@ -3,7 +3,7 @@ import _ from 'underscore';
 var SimpleSegmentAggregation = {
 
   // Segment an array of events by scale
-  aggregate: function(group, scale, options) {
+  aggregate(group, scale, options) {
     scale = scale || 'weeks';
     options = options || {};
     _.defaults(options, {
@@ -24,7 +24,7 @@ var SimpleSegmentAggregation = {
       allEvents,
       continuesBackward;
 
-    _.each(group, function(g, index) {
+    _.each(group, (g, index) => {
       currentIds = _.pluck(g.events, options.idAttribute);
       continuesBackward = false;
 
