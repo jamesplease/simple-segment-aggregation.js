@@ -35,11 +35,11 @@ An aggregate is an Object with the following properties
 
 This library exposes a single method.
 
-##### `aggregate( group [, options] )`
+##### `aggregate( group, scale [, options] )`
 
-It accepts a group of segments and returns a group of aggregates. The number of
-aggregates you get could be the same number of segments that you pass in, or less, but
-never more.
+It accepts a `group` of segments and returns a group of aggregates. `scale` can be
+any resolution that moment.js supports. The number of aggregates you get could
+be the same number of segments that you pass in, or less, but never more.
 
 Options can be used to customize the behavior of the API. The available options are:
 
