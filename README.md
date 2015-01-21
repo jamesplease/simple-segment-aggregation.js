@@ -1,4 +1,7 @@
-# simple-segment-aggregation.js [![Travis build status](http://img.shields.io/travis/jmeas/simple-segment-aggregation.js.svg?style=flat)](https://travis-ci.org/jmeas/simple-segment-aggregation.js)
+# simple-segment-aggregation.js
+[![Travis build status](http://img.shields.io/travis/jmeas/simple-segment-aggregation.js.svg?style=flat)](https://travis-ci.org/jmeas/simple-segment-aggregation.js)
+[![Dependency Status](https://david-dm.org/jmeas/simple-segment-aggregation.js.svg)](https://david-dm.org/jmeas/simple-segment-aggregation.js) 
+[![devDependency Status](https://david-dm.org/jmeas/simple-segment-aggregation.js/dev-status.svg)](https://david-dm.org/jmeas/simple-segment-aggregation.js#info=devDependencies)
 
 Aggregate consecutive segments by their events.
 
