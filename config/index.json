@@ -1,0 +1,11 @@
+{
+  "destinationFolder": "dist",
+  "exportFileName": "simple-segment-aggregation",
+  "entryFileName": "simple-segment-aggregation",
+  "exportVarName": "SimpleSegmentAggregation",
+  "mochaGlobals": [
+    "stub", "spy", "expect",
+    "SimpleSegmentAggregation",
+    "_", "fixtures"
+  ]
+}

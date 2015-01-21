@@ -2,32 +2,25 @@
 <html lang='en'>
 <head>
   <meta charset='utf-8'>
-  <title>Simple Segment Aggregation Tests</title>
-
+  <title>Tests</title>
   <link rel='stylesheet' href='../node_modules/mocha/mocha.css' />
 
-  <!-- Load testing tools -->
+  <!-- Testing libraries -->
   <script src='../node_modules/mocha/mocha.js'></script>
   <script src='../node_modules/chai/chai.js'></script>
   <script src='../node_modules/sinon/pkg/sinon.js'></script>
   <script src='../node_modules/sinon-chai/lib/sinon-chai.js'></script>
 
-  <!-- Load any dependencies -->
-  <script src='../node_modules/moment/moment.js'></script>
-  <script src='../node_modules/underscore/underscore.js'></script>
+  <!-- Livereload -->
+  <script src='http://localhost:35729/livereload.js'></script>
 
-  <!-- Load the library -->
-  <script src='../src/simple-segment-aggregation.js'></script>
+  <!-- Polyfill (required by 6to5) -->
+  <script src='../node_modules/6to5/browser-polyfill.js'></script>
 
-  <!-- Setup tests -->
-  <script src='setup/helpers.js'></script>
+  <!-- Load the built library -->
+  <script src='../tmp/__spec-build.js'></script>
 
-  <!-- Fixtures -->
-  <script src='fixtures/one-segment.js'></script>
-  <script src='fixtures/no-aggregation.js'></script>
-  <script src='fixtures/aggregation.js'></script>
-
-  <!-- Load the test specs -->
+  <!-- Add your tests here -->
   <script src='unit/one-segment.js'></script>
   <script src='unit/no-aggregation.js'></script>
   <script src='unit/aggregation.js'></script>

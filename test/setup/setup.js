@@ -1,0 +1,20 @@
+module.exports = function() {
+  global.expect = global.chai.expect;
+
+  global.fixtures = {};
+  global.fixtures.aggregation = require('../fixtures/aggregation');
+  global.fixtures.noAggregation = require('../fixtures/no-aggregation');
+  global.fixtures.oneSegment = require('../fixtures/one-segment');
+
+  beforeEach(function() {
+    this.sandbox = global.sinon.sandbox.create();
+    global.stub = this.sandbox.stub.bind(this.sandbox);
+    global.spy  = this.sandbox.spy.bind(this.sandbox);
+  });
+
+  afterEach(function() {
+    delete global.stub;
+    delete global.spy;
+    this.sandbox.restore();
+  });
+}

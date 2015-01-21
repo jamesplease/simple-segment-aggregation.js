@@ -1,3 +1,5 @@
+import _ from 'underscore';
+
 var SimpleSegmentAggregation = {
 
   // Segment an array of events by scale
@@ -67,3 +69,5 @@ var SimpleSegmentAggregation = {
     return aggregates;
   }
 };
+
+export default SimpleSegmentAggregation;
