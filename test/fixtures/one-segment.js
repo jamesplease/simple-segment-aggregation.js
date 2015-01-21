@@ -1,5 +1,5 @@
 //
-// Groups
+// One segment
 //
 
 var fixtures = fixtures || {};

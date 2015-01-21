@@ -5,6 +5,7 @@ module.exports = function() {
   global.fixtures.aggregation = require('../fixtures/aggregation');
   global.fixtures.noAggregation = require('../fixtures/no-aggregation');
   global.fixtures.oneSegment = require('../fixtures/one-segment');
+  global.fixtures.options = require('../fixtures/options');
 
   beforeEach(function() {
     this.sandbox = global.sinon.sandbox.create();
