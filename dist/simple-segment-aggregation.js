@@ -1,19 +1,12 @@
-(function (root, factory) {
-  if (typeof define === "function" && define.amd) {
-    define(["underscore"], factory);
-  } else if (typeof exports !== "undefined") {
-    var _ = require("underscore");
-    module.exports = factory(_);
-  } else {
-    root.SimpleSegmentAggregation = factory(root._);
-  }
+(function (global, factory) {
+  typeof exports === "object" && typeof module !== "undefined" ? module.exports = factory(require("underscore")) : typeof define === "function" && define.amd ? define(["underscore"], factory) : global.SimpleSegmentAggregation = factory(global._);
 })(this, function (_) {
   "use strict";
 
   var SimpleSegmentAggregation = {
 
     // Segment an array of events by scale
-    aggregate: function (group, scale, options) {
+    aggregate: function aggregate(group, scale, options) {
       scale = scale || "weeks";
       options = options || {};
       _.defaults(options, {
@@ -80,9 +73,8 @@
     }
   };
 
+  var simple_segment_aggregation = SimpleSegmentAggregation;
 
-
-
-  return SimpleSegmentAggregation;
+  return simple_segment_aggregation;
 });
-//# sourceMappingURL=simple-segment-aggregation.js.map
+//# sourceMappingURL=./simple-segment-aggregation.js.map
