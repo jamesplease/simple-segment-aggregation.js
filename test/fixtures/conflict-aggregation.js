@@ -1,15 +1,15 @@
 //
-// Aggregations
+// Conflict Aggregations
 //
 
 var fixtures = fixtures || {};
 
-fixtures.aggregation = {};
+fixtures.conflictAggregation = {};
 
 var module = module || {};
-if (module.exports) { module.exports = fixtures.aggregation; }
+if (module.exports) { module.exports = fixtures.conflictAggregation; }
 
-fixtures.aggregation.twoSegments = [
+fixtures.conflictAggregation.twoSegments = [
   {
     timestamp: 1,
     events: [{id: 1}, {id: 2}]
@@ -20,7 +20,7 @@ fixtures.aggregation.twoSegments = [
   }
 ];
 
-fixtures.aggregation.mixed = [
+fixtures.conflictAggregation.mixed = [
   {
     timestamp: 1,
     events: [{id: 1}, {id: 2}]
