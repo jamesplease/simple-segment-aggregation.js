@@ -1,7 +1,7 @@
 describe('Aggregation', function() {
   describe('Two segments', function() {
     beforeEach(function() {
-      this.fixtures = fixtures.aggregation.twoSegments;
+      this.fixtures = fixtures.conflictAggregation.twoSegments;
       this.aggregates = SimpleSegmentAggregation.aggregate(this.fixtures, 'seconds');
     });
 
@@ -33,7 +33,7 @@ describe('Aggregation', function() {
 
   describe('Mixed', function() {
     beforeEach(function() {
-      this.fixtures = fixtures.aggregation.mixed;
+      this.fixtures = fixtures.conflictAggregation.mixed;
       this.aggregates = SimpleSegmentAggregation.aggregate(this.fixtures, 'seconds');
     });
 

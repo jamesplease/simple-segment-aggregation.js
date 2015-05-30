@@ -1,5 +1,14 @@
 import _ from 'underscore';
 
+// Two events are considered to be of the same type
+// when everything about them matches aside from their ID
+function sameEventTypes(eventsOne, eventsTwo, idProp) {
+  eventsOne = _.map(eventsOne, e => _.omit(e, idProp));
+  eventsTwo = _.map(eventsTwo, e => _.omit(e, idProp));
+
+  return _.isEqual(eventsOne, eventsTwo);
+}
+
 var SimpleSegmentAggregation = {
 
   // Segment an array of events by scale
@@ -22,6 +31,7 @@ var SimpleSegmentAggregation = {
       intersect,
       sameLength,
       allEvents,
+      sameEventType,
       continuesBackward;
 
     _.each(group, (g, index) => {
@@ -32,11 +42,13 @@ var SimpleSegmentAggregation = {
         // Whether the contents have the same length
         sameLength = currentIds.length === prevIds.length;
         intersect = _.intersection(currentIds, prevIds);
-        // Whether the events in the current list are all contained within the last
+
+        // Whether the events in the current list are exactly the same as the last
         allEvents = intersect.length === currentIds.length;
+        sameEventType = sameEventTypes(g.events, group[index - 1].events, options.idAttribute);
 
         // This means that they occupy the same aggregate
-        if (sameLength && allEvents) {
+        if (sameLength && (allEvents || sameEventType)) {
           aggregates[i].duration++;
         }
 
@@ -50,9 +62,9 @@ var SimpleSegmentAggregation = {
         }
       }
       
-      // The algorithm is pessimistic. Assume that the
-      // block does not extend forward. Subsequent
-      // iterations disprove, and modify, the assumption
+      // The algorithm is pessimistic. Assume that
+      // `continuesForward` is false. Subsequent
+      // iterations disprove (and modify) the assumption
       if (!aggregates[i]) {
         aggregates[i] = {
           events: _.clone(g.events),

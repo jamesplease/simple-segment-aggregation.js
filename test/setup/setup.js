@@ -2,7 +2,8 @@ module.exports = function() {
   global.expect = global.chai.expect;
 
   global.fixtures = {};
-  global.fixtures.aggregation = require('../fixtures/aggregation');
+  global.fixtures.conflictAggregation = require('../fixtures/conflict-aggregation');
+  global.fixtures.continuingAggregation = require('../fixtures/continuing-aggregation');
   global.fixtures.noAggregation = require('../fixtures/no-aggregation');
   global.fixtures.oneSegment = require('../fixtures/one-segment');
   global.fixtures.options = require('../fixtures/options');
